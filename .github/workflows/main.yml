@@ -1,4 +1,4 @@
-name: CI
+name: ContohCI
 
 on: [push]
 
@@ -10,14 +10,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Before script
-      run: echo "Persiapan sebelum test ..."
+    - name: Skenario Test 1
+      run: echo "Menjalankan Test 1"
 
-    - name: Run script
-      run: echo "Afif Ganteng ..."
+    - name: Skenario Test 2
+      run: echo "Menjalankan Test 2"
 
-    - name: After script
-      run: echo "menyelesaikan test"
+    - name: Skenario Test 3
+      run: echo "Menjalankan Test 3"
 
   build_image:
     runs-on: ubuntu-latest
