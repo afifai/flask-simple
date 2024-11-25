@@ -1,0 +1,38 @@
+name: CI
+
+on: [push]
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Before script
+      run: echo "Persiapan sebelum test ..."
+
+    - name: Run script
+      run: echo "Afif Ganteng ..."
+
+    - name: After script
+      run: echo "menyelesaikan test"
+
+  build_image:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Build image script
+      run: |
+        echo "membuat docker image ..."
+        echo "tagging docker ..."
+
+  push_image:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Push image script
+      run: |
+        echo "Login Docker Registry ..."
+        echo "Push docker ke image registry"
