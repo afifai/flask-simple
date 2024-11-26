@@ -26,3 +26,4 @@ jobs:
       run: |
         echo "Login Docker Registry ..."
         echo "Push docker ke image registry"
+        echo "Coba tambahan..."
